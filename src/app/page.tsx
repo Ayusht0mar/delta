@@ -1,9 +1,18 @@
-import Navbar from "@/components/Navbar";
-
 export default function Home() {
   return (
-    <div className="bg-neutral-950 min-h-screen">
-        <Navbar/>
+    <div>
+        <div className="text-white">
+          <h2>Making changes into tools according to my needs.</h2>
+
+          <ul>
+            <li>
+              <a href="/codeshots">CodeShots</a>
+            </li>
+            <li>
+              <a href="/framex">FrameX</a>
+            </li>
+          </ul>
+        </div>
 
     </div>
   );
