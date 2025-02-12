@@ -8,11 +8,7 @@ import { toast } from "sonner";
 
 import { RefObject } from "react";
 
-interface ExportOptionsProps {
-  targetRef: RefObject<HTMLElement>;
-}
-
-const ExportOptions = ({ targetRef }: ExportOptionsProps) => {
+const ExportOptions = ({ targetRef }: { targetRef: RefObject<HTMLDivElement> }) => {
 
     const title = useStore((state) => state.title);
 
@@ -84,7 +80,7 @@ const ExportOptions = ({ targetRef }: ExportOptionsProps) => {
     <div className="relative inline-block" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex gap-2 px-4 py-1.5 bg-neutral-200 text-neutral-900 font-semibold rounded transition"
+        className="flex gap-2 px-3 py-1.5 bg-neutral-200 text-neutral-900 rounded transition"
       >
         <p>Export</p>
         <Image src="/export.svg" alt="export" width={20} height={20} />
